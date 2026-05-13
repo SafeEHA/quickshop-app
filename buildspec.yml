@@ -1,15 +1,14 @@
-# buildspec.yml
 version: 0.2
 
 phases:
   install:
     commands:
-      - npm install
-
+      - echo "Nothing to install – no package.json"
   build:
     commands:
-      - echo "No build step needed, just packaging app"
+      - echo "Build step not needed – just packaging files for CodeDeploy"
 
 artifacts:
   files:
     - '**/*'
+  discard-paths: no
