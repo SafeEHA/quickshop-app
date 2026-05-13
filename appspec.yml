@@ -4,7 +4,15 @@ files:
   - source: /
     destination: /home/ec2-user/quickshop-app
 hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 60
+      runas: root
+  AfterInstall:
+    - location: scripts/install_deps.sh
+      timeout: 120
+      runas: root
   ApplicationStart:
-    - location: start.sh
-      timeout: 300
-      runas: ec2-user
+    - location: scripts/start.sh
+      timeout: 60
+      runas: root

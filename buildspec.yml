@@ -3,14 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Nothing to install – no package.json"
+      - echo "Installing Node.js dependencies"
+      - npm install
   build:
     commands:
-      - echo "Build step not needed – just packaging files for CodeDeploy"
+      - echo "Packaging for CodeDeploy"
 
 artifacts:
   files:
     - '**/*'
   discard-paths: no
-
-
