@@ -1,4 +1,8 @@
 #!/bin/bash
+set -e
+
 cd /home/ec2-user/quickshop-app
-sudo pkill node || true
-nohup node app.js > /home/ec2-user/quickshop.log 2>&1 &
+
+# For this lab, we only need files copied; no backend service to start.
+echo "Files deployed to /home/ec2-user/quickshop-app"
+exit 0
