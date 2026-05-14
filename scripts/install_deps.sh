@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-cd /home/ec2-user/quickshop-app
-npm install
+cd /var/www/quickshop-app
+/home/ec2-user/.nvm/versions/node/v16.20.2/bin/npm install --production
