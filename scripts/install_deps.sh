@@ -1,4 +1,8 @@
 #!/bin/bash
 set -e
-cd /home/ec2-user/quickshop-app
-npm install
+
+export NVM_DIR="/home/ec2-user/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+cd /var/www/quickshop-app
+npm install --production
